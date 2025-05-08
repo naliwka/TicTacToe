@@ -25,7 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.lessontictactoe.ui.theme.TicTacToe
+import com.example.lessontictactoe.ui.theme.TicTacToeTheme
 import kotlinx.coroutines.delay
 
 
@@ -35,7 +35,7 @@ fun TicTacToeApp() {
     val colors = if (darkThemeEnabled) darkColorScheme() else lightColorScheme()
 
     Surface(color = colors.background, modifier = Modifier.fillMaxSize()) {
-        TicTacToe(darkTheme = darkThemeEnabled) {
+        TicTacToeTheme(darkTheme = darkThemeEnabled) {
             Column(
                 modifier = Modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally
@@ -330,7 +330,7 @@ fun GameControls(
 @Composable
 fun MainScreenPreview()
 {
-    TicTacToe {
+    TicTacToeTheme {
         TicTacToeApp()
     }
 }
